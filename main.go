@@ -19,6 +19,10 @@ func main() {
 	// an example of how lamb works
 	govel.Get("/render/{name}", actions.Render)
 
+	// You can extend govel (similar to how lamb, our templating engine, and lion, our ORM, do) by adding your own custom module to the InitModules function.
+	// This function takes a list of functions as a parameter, and each of these functions accepts a parameter of type map[interface{}]interface{} and returns an error.
+	// The map passed to these functions contains the configuration data from the configuration YAML file.
+	// This allows you to validate or load any necessary configuration for your library.
 	govel.InitModules(lamb.Init)
 
 	// govel starts with a configuration file, it must be a YAML file where you can define the port and other options
