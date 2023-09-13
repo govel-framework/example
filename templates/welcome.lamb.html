@@ -1,0 +1,10 @@
+{? # this will not be executed # ?}
+{? # extends indicates where the template extends from, being inside a directory it is replaced by / with . # ?}
+{? extends("layouts.base") ?}
+
+{? section("body") ?}
+    <h1 class="text-3xl font-semibold mb-4">An example of how Lamb works</h1>
+    <p class="text-gray-700">Thank you for visiting our example page built with Lamb and Tailwind CSS.</p>
+    {? # The lamb code has to start with {? and end with ?} # ?}
+    <a href="{? route('index') ?}">Home</a>
+{? endsection ?}

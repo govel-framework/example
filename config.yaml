@@ -1,0 +1,7 @@
+# required
+port: 8080
+
+# these configurations are not from the framework, they are needed by lamb (the templating engine) to work
+lamb:
+  # dir indicates where all the html files are, it must end with /
+  dir: ./templates/
